@@ -4,18 +4,20 @@ import CounterView from './CounterView';
 import CounterViewUsingContext from './CounterViewUsingContext';
 import { CounterProvider } from './context';
 
+const context = window.location.search === '?ctx';
+
 function App() {
   return (
     <>
-      <CounterProvider>
-        <CounterViewUsingContext />
-      </CounterProvider>
+      {context ? (
+        <CounterProvider>
+          <CounterViewUsingContext />
+        </CounterProvider>
+      ) : (
+        <CounterView />
+      )}
     </>
   );
-}
-
-function AppB() {
-  return <CounterView />;
 }
 
 export default App;
