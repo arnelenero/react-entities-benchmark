@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { useCounter } from './entities';
 
-const iterations = 100000;
+const iterations = 1000000;
 let startTime = null;
 
 const CounterView = () => {
