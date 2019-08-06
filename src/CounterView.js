@@ -6,7 +6,7 @@ const iterations = 1000000;
 let startTime = null;
 
 const CounterView = () => {
-  const [counter, { increment, decrement }] = useCounter();
+  const [counter, { increment }] = useCounter();
   const [elapsed, setElapsed] = useState(null);
 
   useEffect(() => {

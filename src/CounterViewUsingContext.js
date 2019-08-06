@@ -17,7 +17,7 @@ const CounterViewUsingContext = () => {
   }, []);
 
   useEffect(() => {
-    if (counter && counter.value === iterations) {
+    if (counter.value === iterations) {
       setElapsed(Date.now() - startTime);
     }
   }, [counter]);
