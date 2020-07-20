@@ -14,7 +14,7 @@ const CounterViewUsingContext = () => {
     for (let i = 0; i < iterations; i++) {
       dispatch({ type: 'increment' });
     }
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     if (counter.value === iterations) {

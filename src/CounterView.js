@@ -14,13 +14,13 @@ const CounterView = () => {
     for (let i = 0; i < iterations; i++) {
       increment(1);
     }
-  }, []);
+  }, [increment]);
 
   useEffect(() => {
     if (counter.value === iterations) {
       setElapsed(Date.now() - startTime);
     }
-  });
+  }, [counter]);
 
   return <>{elapsed !== null && <div>{elapsed}</div>}</>;
 };
